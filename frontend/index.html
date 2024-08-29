@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="./index.js" type="text/javascript" defer></script>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Job Application Signup</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+			rel="stylesheet"
+		/>
+		<style>
+			/* Animated Background */
+			body {
+				background: linear-gradient(45deg, #1a73e8, #ff4081, #22c55e);
+				background-size: 400% 400%;
+				animation: gradientBackground 10s ease infinite;
+			}
+
+			@keyframes gradientBackground {
+				0% {
+					background-position: 0% 50%;
+				}
+				50% {
+					background-position: 100% 50%;
+				}
+				100% {
+					background-position: 0% 50%;
+				}
+			}
+		</style>
+	</head>
+	<body class="bg-gray-100">
+		<nav class="bg-white p-4 shadow">
+			<div class="container mx-auto flex justify-between items-center">
+				<a href="/index.html" class="text-2xl font-bold text-blue-600">JobPortal</a>
+				<ul class="flex space-x-4">
+					<li>
+						<a href="search.html" class="text-gray-700 hover:text-blue-600"
+							>Search Candidates</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container mx-auto mt-10">
+			<div class="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+				<h2 class="text-3xl font-bold mb-8 text-gray-800">
+					Job Application Form
+				</h2>
+				<form id="form" class="space-y-8">
+					<!-- Row 1 -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label
+								for="firstName"
+								class="block text-sm font-medium text-gray-700"
+								>First Name</label
+							>
+							<input
+								type="text"
+								id="firstName"
+								name="firstName"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="lastName"
+								class="block text-sm font-medium text-gray-700"
+								>Last Name</label
+							>
+							<input
+								type="text"
+								id="lastName"
+								name="lastName"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label for="email" class="block text-sm font-medium text-gray-700"
+								>Email</label
+							>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Row 2 -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label for="phone" class="block text-sm font-medium text-gray-700"
+								>Phone Number</label
+							>
+							<input
+								type="tel"
+								id="phone"
+								name="phone"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="jobCategory"
+								class="block text-sm font-medium text-gray-700"
+								>Job Category</label
+							>
+							<select
+								id="jobCategory"
+								name="jobCategory"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							>
+								<option value="">Select a category</option>
+								<option value="Software Development">
+									Software Development
+								</option>
+								<option value="Marketing">Marketing</option>
+								<option value="Sales">Sales</option>
+								<option value="Design">Design</option>
+								<option value="Finance">Finance</option>
+								<option value="Human Resources">Human Resources</option>
+								<option value="Customer Support">Customer Support</option>
+							</select>
+						</div>
+						<div>
+							<label
+								for="expectedSalary"
+								class="block text-sm font-medium text-gray-700"
+								>Expected Salary</label
+							>
+							<input
+								type="number"
+								id="expectedSalary"
+								name="expectedSalary"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Row 3 -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label
+								for="address1"
+								class="block text-sm font-medium text-gray-700"
+								>Address Line 1</label
+							>
+							<input
+								type="text"
+								id="address1"
+								name="address1"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="address2"
+								class="block text-sm font-medium text-gray-700"
+								>Address Line 2</label
+							>
+							<input
+								type="text"
+								id="address2"
+								name="address2"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+							/>
+						</div>
+						<div>
+							<label for="city" class="block text-sm font-medium text-gray-700"
+								>City</label
+							>
+							<input
+								type="text"
+								id="city"
+								name="city"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Row 4 -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label for="state" class="block text-sm font-medium text-gray-700"
+								>State</label
+							>
+							<input
+								type="text"
+								id="state"
+								name="state"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label for="zip" class="block text-sm font-medium text-gray-700"
+								>Zip Code</label
+							>
+							<input
+								type="number"
+								id="zip"
+								name="zip"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+						<div>
+							<label
+								for="country"
+								class="block text-sm font-medium text-gray-700"
+								>Country</label
+							>
+							<input
+								type="text"
+								id="country"
+								name="country"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+
+					<!-- Row 5 -->
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label
+								for="education"
+								class="block text-sm font-medium text-gray-700"
+								>Education Qualification</label
+							>
+							<select
+								id="education"
+								name="education"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							>
+								<option value="diploma">Diploma</option>
+								<option value="grad">Graduation</option>
+								<option value="pg">Post Graduation</option>
+							</select>
+						</div>
+						<div>
+							<label
+								for="education-spec"
+								class="block text-sm font-medium text-gray-700"
+								>Specialization</label
+							>
+							<input
+								type="text"
+								id="education-spec"
+								name="education-spec"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+					<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+						<div>
+							<label
+								for="resume"
+								class="block text-sm font-medium text-gray-700"
+								>Resume</label
+							>
+							<input
+								type="file"
+								id="resume"
+								name="resume"
+								class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+								required
+							/>
+						</div>
+					</div>
+					<div>
+						<button
+							type="submit"
+							id="submitBtn"
+							class="w-full bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+						>
+							Submit
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
